@@ -1,0 +1,4 @@
+while read line
+do
+cp "/opt/bepress/archive/digitalcommons.ohsu.edu/etd/$line/metadata.xml" "metadata/$line-metadata.xml"
+done
