@@ -1,6 +1,2 @@
-cat archive_manifest.json |jq '.etd| keys[] as $k | [$k,.[$k].unstamped.filename] |@tsv'
+cat archive_manifest.json |jq -r '.etd| keys[] as $k | [$k,.[$k].unstamped.filename] |@tsv'
 
-#while read line
-#do
-#cp "/opt/bepress/archive/digitalcommons.ohsu.edu/etd/$line/metadata.xml" "metadata/$line-metadata.xml"
-#done
